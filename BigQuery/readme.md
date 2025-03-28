@@ -1,4 +1,4 @@
-# Gas Emissions Analysis using Google Earth Engine
+# Climate Change Analysis using Google Earth Engine
 
 ## Overview
 This project utilizes Google Earth Engine (GEE) and Python to analyze the levels of Carbon Monoxide (CO), Methane (CH4), and Nitrogen Dioxide (NO2) over selected locations. Users can click on a map to select a location, and the system will extract monthly averaged gas concentration data from Sentinel-5P satellite images.
