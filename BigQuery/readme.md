@@ -1,22 +1,48 @@
-**Overview**
-This project utilizes Google Earth Engine (GEE) to process and analyze geospatial data. The code is written in JavaScript (.js) for the Earth Engine Code Editor.
+# Gas Emissions Analysis using Google Earth Engine
 
-**Features**
-1. _Remote Sensing Analysis_: Analyze satellite imagery from Sentinel-5P
-2. _Time Series Processing_: Monitor environmental changes over time.
-3. _Data Visualization_: Generate interactive maps and charts.
+## Overview
+This project utilizes Google Earth Engine (GEE) and Python to analyze the levels of Carbon Monoxide (CO), Methane (CH4), and Nitrogen Dioxide (NO2) over selected locations. Users can click on a map to select a location, and the system will extract monthly averaged gas concentration data from Sentinel-5P satellite images.
 
-**Getting Started**
-_**
-Prerequisites**_
+## Features
+- Interactive map selection for analyzing gas emissions.
+- Extraction of CO, CH4, and NO2 data from Sentinel-5P.
+- Data processing and storage in CSV and GeoJSON formats.
+- Automated report generation for further analysis.
 
-Google Earth Engine Account: Sign up at Google Earth Engine
-GEE Code Editor: Open Code Editor to run .js scripts.
+## Requirements
+To run this project, ensure you have the following dependencies installed:
 
-**Usage**
+- Python 3.8+
+- Google Earth Engine (GEE) API
+- geemap
+- pandas
 
-_Running JavaScript Code_
+You can install the dependencies using:
+```sh
+pip install earthengine-api geemap pandas
+```
 
-1.Open the Earth Engine Code Editor.
-2.Copy and paste the script from scripts/analysis.js.
-3.Click Run to execute the script.
+## Setup Instructions
+1. **Authenticate with Google Earth Engine:**
+   ```sh
+   earthengine authenticate
+   ```
+
+2. **Run the Python Script:**
+   ```sh
+   python gee_co_analysis.py
+   ```
+
+3. **Interact with the Map:**
+   - Click on a location to retrieve emissions data.
+   - The extracted data is saved as `Gas_Emissions.csv` and `Gas_Emissions.geojson`.
+
+## Output
+The script generates:
+- **Gas_Emissions.csv** - A tabular representation of gas concentration levels over time.
+- **Gas_Emissions.geojson** - A geographical dataset for spatial analysis.
+
+## Data Source
+The data is sourced from:
+- **Sentinel-5P**: Copernicus Atmosphere Monitoring Service (CAMS) for greenhouse gas monitoring.
+
